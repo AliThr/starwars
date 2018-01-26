@@ -51,12 +51,55 @@ class APIGrabber():
 
     def pullDataFromAPI(self, planetChoice):
         url = "https://swapi.co/api/planets/" + str(planetChoice) + "/" + "?format=json"
-        print url
         APIData = http.request('GET', url)
         planetData = ast.literal_eval(APIData.data)
-        return planetData["name"]
+        return planetData
 
-'''
+    def getPlanetName(self, planetData):
+        planetName = planetData["name"]
+        return planetName
+
+    def getPlanetRotationalPeriod(self, planetData):
+        planetRotationalPeriod = planetData["rotation_period"]
+        return planetRotationalPeriod
+
+    def getPlanetOrbitalPeriod(self, planetData):
+        planetOrbitalPeriod = planetData["orbital_period"]
+        return planetOrbitalPeriod
+
+    def getPlanetDiameter(self, planetData):
+        planetDiameter = planetData["diameter"]
+        return planetDiameter
+
+    def getPlanetClimate(self, planetData):
+        planetClimate = planetData["climate"]
+        return planetClimate
+
+    def getPlanetGravity(self, planetData):
+        planetGravity = planetData["gravity"]
+        return planetGravity
+
+    def getPlanetTerrain(self, planetData):
+        planetTerrain = planetData["terrain"]
+        return planetTerrain
+
+    def getPlanetSurfaceWaterPercentage(self, planetData):
+        planetSurfaceWater = planetData["surface_water"]
+        return planetSurfaceWater
+
+    def getPlanetPopulation(surface_water):
+        planetPopulation = planetData["population"]
+        return planetPopulation
+
     def returnPlanetInformation(self, planetChoice):
-        return self.pullDataFromAPI(planetChoice)
-'''
+        print self.getPlanetName(planetData)
+        print self.getPlanetRotationalPeriod(planetData)
+        print self.getPlanetOrbitalPeriod(planetData)
+        print self.getPlanetDiameter(planetData)
+        print self.getPlanetClimate(planetData)
+        print self.getPlanetGravity(planetData)
+        print self.getPlanetTerrain(planetData)
+        print self.getPlanetSurfaceWaterPercentage(planetData)
+        print self.getPlanetPopulation(planetData)
+
+    
