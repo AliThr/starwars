@@ -11,7 +11,10 @@ elif len(sys.argv) == 2:
 elif len(sys.argv) == 3:
     if sys.argv[1] == "planet":
         planetChoice = sys.argv[2]
-        print APIGrabber().returnPlanetInformation(planetChoice)
+        if int(sys.argv[2]) <= 61 and int(sys.argv[2]) > 0:
+            APIGrabber().returnPlanetInformation(planetChoice)
+        else:
+            print "There are only 61 available planets. Please choose again."
     else:
         print Help().assist()
 else:

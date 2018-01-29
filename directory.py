@@ -102,14 +102,14 @@ class APIGrabber():
         return planetPopulation
 
     def returnPlanetInformation(self, planetChoice):
-        print self.getPlanetName(planetChoice)
-        print self.getPlanetRotationalPeriod(planetChoice)
-        print self.getPlanetOrbitalPeriod(planetChoice)
-        print self.getPlanetDiameter(planetChoice)
-        print self.getPlanetClimate(planetChoice)
-        print self.getPlanetGravity(planetChoice)
-        print self.getPlanetTerrain(planetChoice)
-        print self.getPlanetSurfaceWaterPercentage(planetChoice)
-        print self.getPlanetPopulation(planetChoice)
+        print "Planet name: " + self.getPlanetName(planetChoice)
+        print "Planet rotational period: " + self.getPlanetRotationalPeriod(planetChoice)
+        print "Planet orbital period: " + self.getPlanetOrbitalPeriod(planetChoice)
+        print "Planet diameter: " + self.getPlanetDiameter(planetChoice)
+        print "Planet climate: " + self.getPlanetClimate(planetChoice)
+        print "Planet gravity: " + self.getPlanetGravity(planetChoice)
+        print "Planet terrain: " + self.getPlanetTerrain(planetChoice)
+        print "Planet percentage surface water: " + self.getPlanetSurfaceWaterPercentage(planetChoice)
+        print "Planet population: " + self.getPlanetPopulation(planetChoice)
 
     
