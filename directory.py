@@ -13,138 +13,56 @@ class Help():
     
     def assist(self):
         return """\n
-     _______.___________.    ___      .______     ____    __    ____  ___      .______          _______.   .______   ____    ____ 
-    /       |           |   /   \     |   _  \    \   \  /  \  /   / /   \     |   _  \        /       |   |   _  \  \   \  /   / 
-   |   (----`---|  |----`  /  ^  \    |  |_)  |    \   \/    \/   / /  ^  \    |  |_)  |      |   (----`   |  |_)  |  \   \/   /  
-    \   \       |  |      /  /_\  \   |      /      \            / /  /_\  \   |      /        \   \       |   ___/    \_    _/   
-.----)   |      |  |     /  _____  \  |  |\  \----.  \    /\    / /  _____  \  |  |\  \----.----)   |    __|  |          |  |     
-|_______/       |__|    /__/     \__\ | _| `._____|   \__/  \__/ /__/     \__\ | _| `._____|_______/    (__) _|          |__|     
+
+  ___  ____   __    ____  _    _    __    ____  ___    ____  _  _ 
+ / __)(_  _) /__\  (  _ \( \/\/ )  /__\  (  _ \/ __)  (  _ \( \/ )
+ \__ \  )(  /(__)\  )   / )    (  /(__)\  )   /\__ \   )___/ \  / 
+ (___/ (__)(__)(__)(_)\_)(__/\__)(__)(__)(_)\_)(___/()(__)   (__)    
                                                                                                                                   
 To print details and an interesting fact about individual planets: starwars.py planet <planet number>
 Planet Numbers:
 ---
-1: Tatooine
+1: Tatooine         2: Alderaan         3: Yavin IV         
 
-2: Alderaan
+4: Hoth             5: Dagobah          6: Bespin
 
-3: Yavin IV
+7: Endor            8: Naboo            9: Coruscant        
 
-4: Hoth
+10: Kamino          11: Geonosis        12. Utapu
 
-5: Dagobah
+13. Mustafar        14. Kashyyyk        15. Polis Massa     
 
-6: Bespin
+16. Mygeeto         17. Felucia         18. Cato Neimoidia
 
-7: Endor
+19. Saleucami       20. Stewjon         21. Eriadu          
 
-8: Naboo
+22. Corellia        23. Rodia           24. Nal Hutta
 
-9: Coruscant
+25. Dantooine       26. Bestine         27. Ord Mantell     
 
-10: Kamino
+28. Unknown         29. Trandosha       30. Socorro
 
-11: Geonosis
+31. Mon Cala        32. Chandrila       33. Sullust         
 
-12. Utapu
+34. Toydaria        35. Malastare       36. Dathomir
 
-13. Mustafar
+37. Ryloth          38. Aleen Minor     39. Vulpter         
 
-14. Kashyyyk
+40. Troiken         41. Tund            42. Haruun Kal
 
-15. Polis Massa
+43. Cerea           44. Glee Anselm     45. Iridonia       
 
-16. Mygeeto
+46. Tholoth         47. Iktotch         48. Quermia
 
-17. Felucia
+49. Dorin           50. Champala        51. Mirial          
 
-18. Cato Neimoidia
+52. Serenno         53. Concord Dawn    54. Zolan
 
-19. Saleucami
+55. Ojom            56. Skako           57. Muunilinst      
 
-20. Stewjon
+58. Shili           59. Kalee           60. Umbara
 
-21. Eriadu
-
-22. Corellia
-
-23. Rodia
-
-24. Nal Hutta
-
-25. Dantooine
-
-26. Bestine
-
-27. Ord Mantell
-
-28. Unknown
-
-29. Trandosha
-
-30. Socorro
-
-31. Mon Cala
-
-32. Chandrila
-
-33. Sullust
-
-34. Toydaria
-
-35. Malastare
-
-36. Dathomir
-
-37. Ryloth
-
-38. Aleen Minor
-
-39. Vulpter
-
-40. Troiken
-
-41. Tund
-
-42. Haruun Kal
-
-43. Cerea
-
-44. Glee Anselm
-
-45. Iridonia
-
-46. Tholoth
-
-47. Iktotch
-
-48. Quermia
-
-49. Dorin
-
-50. Champala
-
-51. Mirial
-
-52. Serenno
-
-53. Concord Dawn
-
-54. Zolan
-
-55. Ojom
-
-56. Skako
-
-57. Muunilinst
-
-58. Shili
-
-59. Kalee
-
-60. Umbara
-
-61. Jakku"""
-
+                    61. Jakku"""
 
 class APIGrabber():
     def __init__(self):
@@ -211,5 +129,3 @@ class APIGrabber():
         print "Planet terrain: " + self.getPlanetTerrain(planetChoice)
         print "Planet percentage surface water: " + self.getPlanetSurfaceWaterPercentage(planetChoice)
         print "Planet population: " + self.getPlanetPopulation(planetChoice)
-
-    
