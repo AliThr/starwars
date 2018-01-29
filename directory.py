@@ -1,4 +1,5 @@
 import urllib3
+urllib3.disable_warnings()
 http = urllib3.PoolManager()
 from urllib3.contrib import pyopenssl
 pyopenssl.inject_into_urllib3()
@@ -55,51 +56,60 @@ class APIGrabber():
         planetData = ast.literal_eval(APIData.data)
         return planetData
 
-    def getPlanetName(self, planetData):
+    def getPlanetName(self, planetChoice):
+        planetData = self.pullDataFromAPI(planetChoice)
         planetName = planetData["name"]
         return planetName
 
-    def getPlanetRotationalPeriod(self, planetData):
+    def getPlanetRotationalPeriod(self, planetChoice):
+        planetData = self.pullDataFromAPI(planetChoice)
         planetRotationalPeriod = planetData["rotation_period"]
         return planetRotationalPeriod
 
-    def getPlanetOrbitalPeriod(self, planetData):
+    def getPlanetOrbitalPeriod(self, planetChoice):
+        planetData = self.pullDataFromAPI(planetChoice)
         planetOrbitalPeriod = planetData["orbital_period"]
         return planetOrbitalPeriod
 
-    def getPlanetDiameter(self, planetData):
+    def getPlanetDiameter(self, planetChoice):
+        planetData = self.pullDataFromAPI(planetChoice)
         planetDiameter = planetData["diameter"]
         return planetDiameter
 
-    def getPlanetClimate(self, planetData):
+    def getPlanetClimate(self, planetChoice):
+        planetData = self.pullDataFromAPI(planetChoice)
         planetClimate = planetData["climate"]
         return planetClimate
 
-    def getPlanetGravity(self, planetData):
+    def getPlanetGravity(self, planetChoice):
+        planetData = self.pullDataFromAPI(planetChoice)
         planetGravity = planetData["gravity"]
         return planetGravity
 
-    def getPlanetTerrain(self, planetData):
+    def getPlanetTerrain(self, planetChoice):
+        planetData = self.pullDataFromAPI(planetChoice)
         planetTerrain = planetData["terrain"]
         return planetTerrain
 
-    def getPlanetSurfaceWaterPercentage(self, planetData):
+    def getPlanetSurfaceWaterPercentage(self, planetChoice):
+        planetData = self.pullDataFromAPI(planetChoice)
         planetSurfaceWater = planetData["surface_water"]
         return planetSurfaceWater
 
-    def getPlanetPopulation(surface_water):
+    def getPlanetPopulation(self, planetChoice):
+        planetData = self.pullDataFromAPI(planetChoice)
         planetPopulation = planetData["population"]
         return planetPopulation
 
     def returnPlanetInformation(self, planetChoice):
-        print self.getPlanetName(planetData)
-        print self.getPlanetRotationalPeriod(planetData)
-        print self.getPlanetOrbitalPeriod(planetData)
-        print self.getPlanetDiameter(planetData)
-        print self.getPlanetClimate(planetData)
-        print self.getPlanetGravity(planetData)
-        print self.getPlanetTerrain(planetData)
-        print self.getPlanetSurfaceWaterPercentage(planetData)
-        print self.getPlanetPopulation(planetData)
+        print self.getPlanetName(planetChoice)
+        print self.getPlanetRotationalPeriod(planetChoice)
+        print self.getPlanetOrbitalPeriod(planetChoice)
+        print self.getPlanetDiameter(planetChoice)
+        print self.getPlanetClimate(planetChoice)
+        print self.getPlanetGravity(planetChoice)
+        print self.getPlanetTerrain(planetChoice)
+        print self.getPlanetSurfaceWaterPercentage(planetChoice)
+        print self.getPlanetPopulation(planetChoice)
 
     

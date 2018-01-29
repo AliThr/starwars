@@ -11,7 +11,7 @@ elif len(sys.argv) == 2:
 elif len(sys.argv) == 3:
     if sys.argv[1] == "planet":
         planetChoice = sys.argv[2]
-        print APIGrabber().pullDataFromAPI(planetChoice)
+        print APIGrabber().returnPlanetInformation(planetChoice)
     else:
         print Help().assist()
 else:
