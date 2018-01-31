@@ -10,6 +10,9 @@ class Help():
     """This class contains the 'assist' function that is shown whenever an incorrect function is placed in the command line."""
     def __init__(self):
         pass
+
+    def version(self):
+        return "1.0"
     
     def assist(self):
         return """\n
