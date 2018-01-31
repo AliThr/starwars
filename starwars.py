@@ -6,6 +6,9 @@ if len(sys.argv) == 1:
 elif len(sys.argv) == 2:
     if sys.argv[1] == "--help":
         print Help().assist()
+    elif sys.argv[1] == "--version":
+        print Help().version()
+        pass
     else:
         print Help().assist()
 elif len(sys.argv) == 3:
